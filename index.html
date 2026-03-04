@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hasnain ? Ayesha</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    overflow:hidden;
+}
+
+/* Scene */
+.scene{
+    perspective:1000px;
+}
+
+/* Card */
+.card{
+    width:400px;
+    height:300px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0px 20px 50px rgba(0,0,0,0.4);
+    transform-style:preserve-3d;
+    animation:rotate 8s infinite linear;
+    text-align:center;
+    padding-top:30px;
+}
+
+@keyframes rotate{
+    0%{transform:rotateY(-20deg)}
+    50%{transform:rotateY(20deg)}
+    100%{transform:rotateY(-20deg)}
+}
+
+/* Names */
+
+.title{
+    font-size:28px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* Characters */
+
+.characters{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/* Boy */
+
+.boy{
+    font-size:20px;
+    color:#2196f3;
+}
+
+/* Girl */
+
+.girl{
+    font-size:20px;
+    color:#e91e63;
+}
+
+/* Heart */
+
+.heart{
+    width:60px;
+    height:60px;
+    background:red;
+    position:relative;
+    transform:rotate(45deg);
+    animation:moveHeart 4s infinite;
+}
+
+.heart:before,
+.heart:after{
+content:"";
+width:60px;
+height:60px;
+background:red;
+border-radius:50%;
+position:absolute;
+}
+
+.heart:before{
+top:-30px;
+left:0;
+}
+
+.heart:after{
+left:-30px;
+top:0;
+}
+
+@keyframes moveHeart{
+
+0%{
+transform:translateX(-100px) rotate(45deg) scale(1);
+}
+
+50%{
+transform:translateX(0px) rotate(45deg) scale(1.2);
+}
+
+100%{
+transform:translateX(100px) rotate(45deg) scale(1);
+}
+
+}
+
+
+/* Message */
+
+.message{
+margin-top:25px;
+font-size:18px;
+color:#555;
+animation:fade 3s infinite;
+}
+
+@keyframes fade{
+0%{opacity:0}
+50%{opacity:1}
+100%{opacity:0}
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="scene">
+
+<div class="card">
+
+<div class="title">
+Hasnain ? Ayesha
+</div>
+
+<div class="characters">
+
+<div class="boy">
+?? Hasnain
+</div>
+
+<div class="heart"></div>
+
+<div class="girl">
+?? Ayesha
+</div>
+
+</div>
+
+<div class="message">
+Hasnain gives his heart to Ayesha ?
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
